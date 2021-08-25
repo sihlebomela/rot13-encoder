@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Righteous&display=swap");
 /* SCSS HEX */
 * {
   padding: 0;
@@ -92,7 +92,9 @@ main {
 }
 
 main textarea {
+  padding: 1rem;
   resize: none;
+  font-family: 'Fira Code';
 }
 
 main textarea::-webkit-resizer {

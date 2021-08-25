@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Righteous&display=swap');
 
 /* SCSS HEX */
 $rich-black-fogra-39: #020402ff;
@@ -72,7 +72,9 @@ main {
     margin: 0 1rem;
 
     textarea {
+        padding: 1rem;
         resize: none;
+        font-family: 'Fira Code';
     }
 
     textarea::-webkit-resizer {
