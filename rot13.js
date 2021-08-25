@@ -30,5 +30,6 @@ function rot13(message) {
 let themeSwitch = document.querySelector('.theme-toggler');
 
 themeSwitch.addEventListener('click', ()=> {
-  themeSwitch.classList.toggle('toggled')
+  themeSwitch.classList.toggle('toggled');
+  document.body.classList.toggle('dark');
 });

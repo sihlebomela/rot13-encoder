@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700&family=Righteous&display=swap');
+
 /* SCSS HEX */
 $rich-black-fogra-39: #020402ff;
 $emerald: #23ce6bff;
@@ -9,6 +11,7 @@ $sunglow: #ffcb47ff;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 html, body {
@@ -21,15 +24,19 @@ html, body {
 }
 
 header {
+    font-family: 'Righteous', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: space-between;
     padding:1rem;
 
+    .switch-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
     .theme-toggler {
-        * {
-            transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-        
+        transition: 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
         position: relative;
         width: 50px;
         height: 25px;
@@ -78,4 +85,13 @@ footer {
     display: flex;
     justify-content: space-evenly;
     height: 100%;
+}
+
+.dark   {
+    background: $rich-black-fogra-39;
+    color: white;
+
+    svg path {
+        fill: white;
+    }
 }
