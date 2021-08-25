@@ -20,11 +20,8 @@ function rot13(message) {
     
     (charCode > 122) ? encoder = -13 : encoder = 13; // if > than it char code limit start from a
     
-    // do not encode if is symbol
-    if (char.match(/[a-z]/)) {
-      return String.fromCharCode(char.charCodeAt(0) + encoder);
-    } else {
-      return char;
-    }
+    // do not encode if is not letter
+    return (char.match(/[a-z]/)) ? String.fromCharCode(char.charCodeAt(0) + encoder) : char;
+  
   }).join(''); // back to string
 }
