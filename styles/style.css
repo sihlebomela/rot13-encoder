@@ -44,6 +44,14 @@ main {
   margin: 0 1rem;
 }
 
+main textarea {
+  resize: none;
+}
+
+main textarea::-webkit-resizer {
+  display: none;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;

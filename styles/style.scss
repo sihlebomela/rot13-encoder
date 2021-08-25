@@ -32,7 +32,16 @@ main {
     align-content: center;
     gap: 1rem;
     margin: 0 1rem;
+
+    textarea {
+        resize: none;
+    }
+
+    textarea::-webkit-resizer {
+        display: none;
+    }
 }
+
 
 footer {
     display: flex;
