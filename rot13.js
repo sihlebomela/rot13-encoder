@@ -1,17 +1,11 @@
 // THANK U
 let lowerCaseLimit = 122
-let upperCaseLimit = 90
 
 function rot13(message) {
   let decoded = '';
   message = message.split('');
   message.forEach((char) => {
-
-    if(char == char.toUpperCase()) { // is uppercase
-      decoded += decode(char, upperCaseLimit)
-    } else if (char == char.toLowerCase()) { // is lowecasecase
-      decoded += decode(char, lowerCaseLimit)
-    }
+      decoded += decode(char.toLowerCase(), lowerCaseLimit)
   });
   
 return decoded.split(' ').map(letter => letter.replace('undefined','z')).join(' ')
