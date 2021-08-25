@@ -13,27 +13,18 @@ function processAndUpdate() {
 processAndUpdate();
 
 function rot13(message) {
-  let decoded = '';
-  message = message.split('');
-  message.forEach((char) => {
-      decoded += decode(char.toLowerCase(), lowerCaseLimit)
-  });
-  
-return decoded.split(' ').map(letter => letter.replace('undefined','z')).join(' ')
-}
-
-function decode(char, limit){
-        let encodedChar = '';
-        if (char.match(/[| '-\\"/~^.:,;\[\]\`?!&%$@*+()]/)){ // handle special characters & numbers
-          return char;
-        } else if (/\d/.test(char)){
-          return char;
-        // check if rot13 char code is greater than it case limit 
-        } else if ((char.charCodeAt(0) + 13) > limit) {
-          encodedChar = String.fromCharCode((char.charCodeAt(0) - 13))
-          return encodedChar
-        }  else if ((char.charCodeAt(0) + 13) < limit){
-          encodedChar = String.fromCharCode(char.charCodeAt(0) + 13);
-          return encodedChar;
-        } 
+  return message.split('').map(char => {
+    let encoder = 13; // 13 (because it forward by 13 letters)
+    char = char.toLowerCase();
+    let charCode = (char.charCodeAt(0) + encoder);
+    
+    (charCode > 122) ? encoder = -13 : encoder = 13; // if > than it char code limit start from a
+    
+    // do not encode if is symbol
+    if (char.match(/[| '-\\"/~^.:,;\[\]\`?!&%$@*+()]/)) {
+        return char;
+    } else {
+      return String.fromCharCode(char.charCodeAt(0) + encoder);
+    }
+  }).join(''); // back to string
 }
