@@ -1,6 +1,17 @@
 // THANK U
 let lowerCaseLimit = 122
 
+function processAndUpdate() {
+  let input = document.querySelector('textarea[name="input"]');
+  let output = document.querySelector('textarea[name="output"]');
+
+  input.addEventListener('input', (ev) => {
+    output.value = rot13(input.value);
+  })
+}
+
+processAndUpdate();
+
 function rot13(message) {
   let decoded = '';
   message = message.split('');
