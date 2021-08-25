@@ -85,14 +85,17 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
   margin: 0 1rem;
 }
 
 main textarea {
   padding: 1rem;
+  max-width: 500px;
+  width: 100%;
   resize: none;
   font-family: 'Fira Code';
 }
