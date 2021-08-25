@@ -24,7 +24,7 @@ return decoded.split(' ').map(letter => letter.replace('undefined','z')).join(' 
 
 function decode(char, limit){
         let encodedChar = '';
-        if (char.match(/[| '-\\/~^.:,;\[\]?!&%$@*+()]/)){ // handle special characters & numbers
+        if (char.match(/[| '-\\"/~^.:,;\[\]?!&%$@*+()]/)){ // handle special characters & numbers
           return char;
         } else if (/\d/.test(char)){
           return char;
