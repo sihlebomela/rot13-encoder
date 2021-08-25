@@ -25,3 +25,10 @@ function rot13(message) {
   
   }).join(''); // back to string
 }
+
+// theme switch
+let themeSwitch = document.querySelector('.theme-toggler');
+
+themeSwitch.addEventListener('click', ()=> {
+  themeSwitch.classList.toggle('toggled')
+});
