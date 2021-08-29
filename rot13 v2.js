@@ -21,6 +21,6 @@ function rot13(message) {
     }
   }
 
-  return encoded.join('')
+  return encoded.join(''); // return as string (join)
 
 }
